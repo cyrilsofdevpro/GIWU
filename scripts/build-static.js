@@ -10,9 +10,9 @@ function copyDir(src, dest) {
     const destPath = path.join(dest, name);
     const stat = fs.statSync(srcPath);
     if (stat.isDirectory()) {
-      if (name === 'node_modules' || name === '.git') continue;
+      if (['node_modules', '.git', 'out', 'scripts'].includes(name)) continue;
       copyDir(srcPath, destPath);
-    } else if (name !== 'package-lock.json' && name !== 'yarn.lock' && name !== 'pnpm-lock.yaml') {
+    } else if (!['package-lock.json', 'yarn.lock', 'pnpm-lock.yaml'].includes(name)) {
       fs.copyFileSync(srcPath, destPath);
     }
   }
