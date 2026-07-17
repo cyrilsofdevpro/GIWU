@@ -17,6 +17,7 @@
     />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/chat.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
   </head>
   <body>
@@ -32,7 +33,12 @@
     <header class="site-header">
       <nav class="nav container">
         <a href="#home" class="brand">GiwuLogStore</a>
-        <div class="nav-links">
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-links" id="nav-links">
           <a href="#about">About</a>
           <a href="chat.html">Support Chat</a>
           <a href="profile.html">My Profile</a>

@@ -186,6 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const toggleMenu = () => {
     navLinks.classList.toggle('is-open');
+    menuToggle.classList.toggle('is-open');
     menuToggle.setAttribute('aria-expanded', navLinks.classList.contains('is-open'));
   };
 
@@ -206,6 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
   menuToggle.addEventListener('click', toggleMenu);
   document.querySelectorAll('.nav-links a').forEach((link) => link.addEventListener('click', () => {
     navLinks.classList.remove('is-open');
+    menuToggle.classList.remove('is-open');
     menuToggle.setAttribute('aria-expanded', 'false');
   }));
 

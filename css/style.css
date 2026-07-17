@@ -235,18 +235,44 @@ strong[data-counter] { font-variant-numeric: tabular-nums; }
 .menu-toggle {
   display: none;
   background: transparent;
-  border: 0;
-  padding: 0.4rem;
+  border: none;
+  padding: 0.5rem;
   cursor: pointer;
+  z-index: 1001;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.menu-toggle:active {
+  transform: scale(0.95);
 }
 
 .menu-toggle span {
   display: block;
   width: 24px;
-  height: 2px;
+  height: 2.5px;
   background: var(--text);
-  margin: 5px 0;
-  transition: transform 0.3s ease;
+  margin: 4px 0;
+  transition: all 0.3s cubic-bezier(0.2, 0.9, 0.2, 1);
+  transform-origin: center;
+}
+
+.menu-toggle.is-open span:nth-child(1) {
+  transform: translateY(11px) rotate(45deg);
+}
+
+.menu-toggle.is-open span:nth-child(2) {
+  opacity: 0;
+  width: 0;
+}
+
+.menu-toggle.is-open span:nth-child(3) {
+  transform: translateY(-11px) rotate(-45deg);
 }
 
 .hero {
