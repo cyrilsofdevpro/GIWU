@@ -1,10 +1,14 @@
 {
   "version": 2,
   "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build"
-    }
-  ],
-  "outputDirectory": "dist"
+    { "src": "index.html", "use": "@vercel/static" },
+    { "src": "admin.html", "use": "@vercel/static" },
+    { "src": "chat.html", "use": "@vercel/static" },
+    { "src": "login.html", "use": "@vercel/static" },
+    { "src": "signup.html", "use": "@vercel/static" },
+    { "src": "profile.html", "use": "@vercel/static" },
+    { "src": "css/**", "use": "@vercel/static" },
+    { "src": "js/**", "use": "@vercel/static" },
+    { "src": "assets/**", "use": "@vercel/static" }
+  ]
 }
