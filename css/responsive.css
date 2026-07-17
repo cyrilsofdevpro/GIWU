@@ -50,6 +50,34 @@
     height: 52px;
     font-size: 18px;
   }
+
+  /* Review carousel on tablet */
+  .reviews-carousel {
+    padding: 1rem;
+    overflow: hidden;
+  }
+
+  .carousel-stage {
+    min-height: 180px;
+    overflow: hidden;
+  }
+
+  .carousel-slide {
+    flex-shrink: 0;
+    min-width: 100%;
+  }
+
+  .carousel-controls {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .review-form {
+    max-width: 100%;
+  }
 }
 
 /* ===========================
@@ -215,6 +243,57 @@
     width: 56px;
     height: 56px;
   }
+
+  /* Review carousel on medium mobile */
+  .reviews-carousel {
+    padding: 0.9rem;
+    min-height: auto;
+  }
+
+  .carousel-stage {
+    min-height: 160px;
+    gap: 0.8rem;
+    overflow: hidden;
+    scroll-behavior: smooth;
+  }
+
+  .carousel-slide {
+    min-width: 100%;
+    flex-shrink: 0;
+  }
+
+  .carousel-controls {
+    position: absolute;
+    right: 0.9rem;
+    bottom: 0.9rem;
+    gap: 0.4rem;
+  }
+
+  .icon-btn {
+    padding: 0.35rem 0.5rem;
+    font-size: 18px;
+  }
+
+  .review-form {
+    padding: 1.2rem;
+    max-width: 100%;
+  }
+
+  .review-form h3 {
+    margin-bottom: 1rem;
+  }
+
+  .review-form label {
+    margin-bottom: 0.8rem;
+  }
+
+  .review-form input,
+  .review-form select,
+  .review-form textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+}
 
   /* Chat page */
   .chat-page-shell {
@@ -394,6 +473,76 @@
     gap: 0.75rem;
   }
 
+  /* Reviews carousel on small phones */
+  .reviews-carousel {
+    padding: 0.8rem;
+    border-radius: 14px;
+  }
+
+  .carousel-stage {
+    min-height: 140px;
+    gap: 0.6rem;
+  }
+
+  .carousel-slide {
+    min-width: 100%;
+    padding: 0.8rem;
+  }
+
+  .carousel-controls {
+    right: 0.8rem;
+    bottom: 0.8rem;
+    gap: 0.3rem;
+  }
+
+  .icon-btn {
+    padding: 0.3rem 0.45rem;
+    font-size: 16px;
+  }
+
+  .review-form {
+    padding: 1rem;
+  }
+
+  .review-form h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .review-form label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.75rem;
+  }
+
+  .review-form label span {
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .review-form input,
+  .review-form select,
+  .review-form textarea {
+    font-size: 16px;
+    padding: 0.6rem 0.8rem;
+  }
+
+  .review-form textarea {
+    resize: vertical;
+    max-width: 100%;
+  }
+
+  .review-form > div {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .review-form .btn {
+    flex: 1 1 auto;
+    min-width: 100px;
+  }
+
   /* Forms on small screens */
   input[type="text"],
   input[type="email"],
@@ -544,5 +693,75 @@
   .floating-icon {
     right: 1rem;
     bottom: 4.2rem;
+  }
+
+  /* Reviews carousel on extra small screens */
+  .reviews-carousel {
+    padding: 0.7rem;
+    border-radius: 12px;
+    min-height: auto;
+  }
+
+  .carousel-stage {
+    min-height: 120px;
+    gap: 0.5rem;
+  }
+
+  .carousel-slide {
+    min-width: 100%;
+    padding: 0.7rem;
+  }
+
+  .carousel-controls {
+    right: 0.7rem;
+    bottom: 0.7rem;
+    gap: 0.25rem;
+  }
+
+  .icon-btn {
+    min-width: 36px;
+    min-height: 36px;
+    padding: 0.25rem 0.4rem;
+    font-size: 14px;
+  }
+
+  .review-form {
+    padding: 0.9rem;
+  }
+
+  .review-form h3 {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .review-form label {
+    margin-bottom: 0.6rem;
+  }
+
+  .review-form label span {
+    font-size: 0.85rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .review-form input,
+  .review-form select,
+  .review-form textarea {
+    font-size: 16px;
+    padding: 0.5rem 0.7rem;
+    border-radius: 8px;
+  }
+
+  .review-form textarea {
+    min-height: 80px;
+  }
+
+  .review-form > div {
+    gap: 0.4rem;
+  }
+
+  .review-form .btn {
+    min-height: 40px;
+    padding: 0.6rem 0.75rem;
+    font-size: 13px;
   }
 }
