@@ -233,7 +233,7 @@ strong[data-counter] { font-variant-numeric: tabular-nums; }
 }
 
 .menu-toggle {
-  display: none;
+  display: none !important;
   background: transparent;
   border: none;
   padding: 0.5rem;
@@ -241,11 +241,17 @@ strong[data-counter] { font-variant-numeric: tabular-nums; }
   z-index: 1001;
   width: 44px;
   height: 44px;
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 5px;
   transition: all 0.3s ease;
+  position: relative;
+}
+
+.menu-toggle:hover {
+  background: rgba(255, 215, 0, 0.12);
+  border-radius: 8px;
 }
 
 .menu-toggle:active {
@@ -257,7 +263,6 @@ strong[data-counter] { font-variant-numeric: tabular-nums; }
   width: 24px;
   height: 2.5px;
   background: var(--text);
-  margin: 4px 0;
   transition: all 0.3s cubic-bezier(0.2, 0.9, 0.2, 1);
   transform-origin: center;
 }
@@ -268,7 +273,7 @@ strong[data-counter] { font-variant-numeric: tabular-nums; }
 
 .menu-toggle.is-open span:nth-child(2) {
   opacity: 0;
-  width: 0;
+  transform: scaleX(0);
 }
 
 .menu-toggle.is-open span:nth-child(3) {

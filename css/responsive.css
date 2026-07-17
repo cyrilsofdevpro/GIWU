@@ -3,6 +3,32 @@
 }
 
 /* ===========================
+   DESKTOP (901px and above)
+   =========================== */
+
+@media (min-width: 901px) {
+  .menu-toggle {
+    display: none !important;
+  }
+
+  .nav-links {
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    position: static !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+  .nav-links a {
+    padding: 0 !important;
+  }
+}
+
+/* ===========================
    TABLET & LARGE PHONE (900px and below)
    =========================== */
 
@@ -118,15 +144,37 @@
   }
 
   .menu-toggle {
-    display: block;
-    width: 40px;
-    height: 40px;
+    display: flex !important;
+    width: 44px;
+    height: 44px;
     border: none;
-    background: rgba(255,215,0,0.1);
+    background: rgba(255,215,0,0.08);
     color: var(--text);
     border-radius: 10px;
     cursor: pointer;
-    font-size: 20px;
+    padding: 0.5rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+
+  .menu-toggle:hover {
+    background: rgba(255,215,0,0.15);
+  }
+
+  .menu-toggle:active {
+    transform: scale(0.95);
+  }
+
+  .menu-toggle span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: var(--text);
+    transition: all 0.3s cubic-bezier(0.2, 0.9, 0.2, 1);
+    transform-origin: center;
   }
 
   .nav-links {
@@ -423,9 +471,17 @@
   }
 
   .menu-toggle {
-    width: 36px;
-    height: 36px;
-    font-size: 18px;
+    display: flex !important;
+    width: 40px;
+    height: 40px;
+    padding: 0.4rem;
+    background: rgba(255,215,0,0.08);
+    border-radius: 8px;
+  }
+
+  .menu-toggle span {
+    width: 18px;
+    height: 2px;
   }
 
   .nav-links {
@@ -630,9 +686,17 @@
   }
 
   .menu-toggle {
-    width: 32px;
-    height: 32px;
-    font-size: 16px;
+    display: flex !important;
+    width: 36px;
+    height: 36px;
+    padding: 0.35rem;
+    background: rgba(255,215,0,0.08);
+    border-radius: 8px;
+  }
+
+  .menu-toggle span {
+    width: 16px;
+    height: 1.8px;
   }
 
   /* Single column everything */
