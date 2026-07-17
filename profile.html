@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Profile — GiwuLogStore</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/chat.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav container">
+        <a href="index.html" class="brand">GiwuLogStore</a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="chat.html">Support Chat</a>
+          <a href="profile.html">My Profile</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="section">
+      <div class="container">
+        <section class="glass-card profile-card-panel">
+          <div class="profile-header">
+            <div>
+              <p class="eyebrow">Account</p>
+              <h1>My profile</h1>
+              <p class="muted">Secure account details and support history.</p>
+            </div>
+            <button id="signout-button" class="btn btn-secondary">Sign Out</button>
+          </div>
+
+          <div id="profile-details" class="profile-details">
+            <div class="profile-row">
+              <span>Name</span>
+              <strong id="profile-name">Loading…</strong>
+            </div>
+            <div class="profile-row">
+              <span>Email</span>
+              <strong id="profile-email">Loading…</strong>
+            </div>
+            <div class="profile-row">
+              <span>Role</span>
+              <strong id="profile-role">Loading…</strong>
+            </div>
+            <div class="profile-row">
+              <span>Member since</span>
+              <strong id="profile-created">Loading…</strong>
+            </div>
+          </div>
+
+          <div class="profile-actions">
+            <a href="chat.html" class="btn btn-primary">Open Support</a>
+            <a href="index.html" class="btn btn-secondary">Back to Home</a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <div class="toast" id="toast" aria-live="polite"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/env.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/auth.js"></script>
+    <script>
+      async function loadProfile() {
+        if (!window.GiwuAuth) return window.location.href = 'login.html';
+        const user = await window.GiwuAuth.getUser();
+        if (!user) return window.location.href = 'login.html';
+
+        const profile = await window.GiwuAuth.getProfile();
+        const fullName = profile?.full_name || user.user_metadata?.full_name || user.email.split('@')[0];
+        const email = user.email;
+        const role = profile?.role || user.user_metadata?.role || 'customer';
+        const createdAt = profile?.created_at ? new Date(profile.created_at).toLocaleDateString() : 'Unknown';
+
+        document.getElementById('profile-name').textContent = fullName;
+        document.getElementById('profile-email').textContent = email;
+        document.getElementById('profile-role').textContent = role === 'admin' ? 'Administrator' : 'Customer';
+        document.getElementById('profile-created').textContent = createdAt;
+      }
+
+      document.getElementById('signout-button').addEventListener('click', async () => {
+        await window.GiwuAuth.logout();
+        window.location.href = 'index.html';
+      });
+
+      loadProfile();
+    </script>
+  </body>
+</html>
