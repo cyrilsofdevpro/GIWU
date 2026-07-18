@@ -72,24 +72,8 @@
     <script src="js/env.js"></script>
     <script src="js/config.js"></script>
     <script src="js/auth.js"></script>
+    <script src="js/menu.js"></script>
     <script>
-      // Mobile menu toggle
-      const menuToggle = document.getElementById('menu-toggle');
-      const navLinks = document.getElementById('nav-links');
-      
-      menuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('is-open');
-        menuToggle.classList.toggle('is-open');
-        menuToggle.setAttribute('aria-expanded', navLinks.classList.contains('is-open'));
-      });
-
-      document.querySelectorAll('.nav-links a').forEach((link) => {
-        link.addEventListener('click', () => {
-          navLinks.classList.remove('is-open');
-          menuToggle.classList.remove('is-open');
-          menuToggle.setAttribute('aria-expanded', 'false');
-        });
-      });
 
       async function loadProfile() {
         if (!window.GiwuAuth) return window.location.href = 'login.html';
