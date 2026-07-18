@@ -1,47 +1,32 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Sign up — GiwuLogStore</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
-  </head>
-  <body>
-    <main class="auth-page container">
-      <div class="glass-card auth-card">
-        <h2>Create account</h2>
-        <form id="signup-form">
-          <label>Display name<div><input id="signup-name" type="text" required /></div></label>
-          <label>Email<div><input id="signup-email" type="email" required /></div></label>
-          <label>Password<div><input id="signup-password" type="password" required /></div></label>
-          <div class="actions">
-            <button type="submit" class="btn btn-primary">Create account</button>
-            <a href="login.html" class="btn btn-secondary">Already have an account</a>
-          </div>
-        </form>
-      </div>
-    </main>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="js/env.js"></script>
-    <script src="js/auth.js"></script>
-    <script>
-      const form = document.getElementById('signup-form');
-      form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const name = document.getElementById('signup-name').value.trim();
-        const email = document.getElementById('signup-email').value.trim();
-        const password = document.getElementById('signup-password').value;
-        try {
-          const result = await window.GiwuAuth.signup(email, password, name);
-          if (result?.session) {
-            window.location.href = 'chat.html';
-          } else {
-            alert('Sign-up successful. Please verify your email before logging in.');
-            window.location.href = 'login.html';
-          }
-        } catch (err) { alert(err.message); }
-      });
-    </script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Sign up — GiwuLogStore</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+  <main class="auth-page">
+    <div class="auth-card">
+      <strong class="brand">GiwuLogStore</strong>
+      <h2>Create account</h2>
+      <form id="signup-form">
+        <div class="field-group"><label>Full name<input id="signup-name" type="text" required /></label></div>
+        <div class="field-group"><label>Email address<input id="signup-email" type="email" required /></label></div>
+        <div class="field-group"><label>Password<input id="signup-password" type="password" required /></label></div>
+        <div class="auth-actions">
+          <button type="submit" class="btn btn-primary">Create account</button>
+          <a href="login.html" class="btn btn-secondary">Already have an account</a>
+        </div>
+      </form>
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/env.js"></script>
+  <script src="js/auth.js"></script>
+</body>
 </html>

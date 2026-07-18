@@ -1,95 +1,68 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GiwuLogStore Admin</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/admin.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-  </head>
-  <body>
-    <div class="admin-shell">
-      <aside class="glass-card sidebar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Admin — GiwuLogStore</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+  <main class="admin-shell">
+    <aside class="sidebar">
+      <section class="panel">
+        <strong class="brand">GiwuLogStore</strong>
+        <p class="hero-text">Admin console</p>
+      </section>
+      <nav class="list-panel">
+        <a href="admin.html" class="btn btn-secondary">Dashboard</a>
+        <a href="#" class="btn btn-secondary">Chats</a>
+        <a href="#" class="btn btn-secondary">Users</a>
+        <a href="#" class="btn btn-secondary">Settings</a>
+      </nav>
+      <button id="admin-logout" class="btn btn-primary">Logout</button>
+    </aside>
+    <section class="admin-panel">
+      <div class="panel-header">
         <div>
-          <h2>GiwuLogStore</h2>
-          <p>Admin Console</p>
+          <p class="hero-text">Operations</p>
+          <h1>Live support dashboard</h1>
         </div>
-        <nav>
-          <a href="#" class="active">Dashboard</a>
-          <a href="#">Chats</a>
-          <a href="#">Users</a>
-          <a href="#">Settings</a>
-        </nav>
-        <button id="admin-logout" class="btn btn-secondary">Logout</button>
-      </aside>
-
-      <main class="admin-main">
-        <header class="admin-topbar glass-card">
-          <div>
-            <p class="eyebrow">Operations Center</p>
-            <h1>Live Customer Support</h1>
-          </div>
-          <div class="status-pill">● Online</div>
-        </header>
-
-        <section class="admin-grid">
-          <div class="glass-card panel stats-panel">
-            <h3>Dashboard metrics</h3>
-            <div id="admin-stats" class="admin-stats"></div>
-          </div>
-
-          <div class="glass-card panel">
-            <h3>Active Customers</h3>
-            <div id="customer-list" class="customer-list"></div>
-          </div>
-
-          <div class="glass-card panel conversation-panel">
-            <div class="conversation-header">
-              <div>
-                <h3 id="active-guest">Select a customer</h3>
-                <p id="active-status">Choose a conversation to begin</p>
-              </div>
-            </div>
-            <div class="messages admin-messages" id="admin-messages"></div>
-            <div class="typing" id="admin-typing" aria-live="polite"></div>
-            <div class="composer">
-              <input id="admin-input" type="text" placeholder="Reply as admin..." />
-              <button class="btn btn-primary" id="admin-send">Reply</button>
-            </div>
-          </div>
+        <span>Online</span>
+      </div>
+      <div class="admin-grid">
+        <section class="panel">
+          <h3>Overview</h3>
+          <div id="admin-stats"></div>
         </section>
-      </main>
-    </div>
-
-    <div class="toast" id="toast" aria-live="polite"></div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.32/dist/lenis.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="js/env.js"></script>
-    <script src="js/config.js"></script>
-    <script src="js/firebase.js"></script>
-    <script src="js/auth.js"></script>
-    <script src="js/animations.js"></script>
-    <script>
-      // protect admin route with Supabase auth
-      (async () => {
-        if (!window.GiwuAuth) return window.location.href = 'login.html';
-        const isAdmin = await window.GiwuAuth.isAdmin();
-        if (!isAdmin) {
-          window.location.href = 'login.html';
-        }
-      })();
-    </script>
-    <script src="js/admin.js"></script>
-  </body>
+        <section class="panel">
+          <h3>Active customers</h3>
+          <div id="customer-list"></div>
+        </section>
+      </div>
+      <section class="panel">
+        <div class="panel-header">
+          <div>
+            <h3 id="active-guest">Select a customer</h3>
+            <p id="active-status">Waiting for chat</p>
+          </div>
+        </div>
+        <div class="messages admin-messages" id="admin-messages"></div>
+        <div class="chat-composer">
+          <input id="admin-input" type="text" placeholder="Reply as admin..." autocomplete="off" />
+          <button class="btn btn-primary" id="admin-send">Reply</button>
+        </div>
+      </section>
+    </section>
+  </main>
+  <div class="toast" id="toast" aria-live="polite"></div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/env.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/firebase.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/admin.js"></script>
+</body>
 </html>

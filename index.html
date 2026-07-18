@@ -1,450 +1,107 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="GiwuLogStore delivers a premium digital marketplace experience with real-time support chat, professional customer care, and secure messaging."
-    />
-    <meta name="theme-color" content="#050505" />
-    <title>GiwuLogStore | Premium Support & Marketplace</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/chat.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-  </head>
-  <body>
-    <div class="loader" aria-hidden="true">
-      <div class="loader-core">
-        <div class="loader-ring"></div>
-        <p>GiwuLogStore</p>
-      </div>
-    </div>
-
-    <div class="progress-bar" aria-hidden="true"></div>
-
-    <header class="site-header">
-      <nav class="nav container">
-        <a href="#home" class="brand">GiwuLogStore</a>
-        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <div class="nav-links" id="nav-links">
-          <a href="#about">About</a>
-          <a href="chat.html">Support Chat</a>
-          <a href="profile.html">My Profile</a>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="description" content="GiwuLogStore is a premium support marketplace with secure chat and fast service delivery." />
+  <title>GiwuLogStore | Premium Support Marketplace</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand">GiwuLogStore</a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="nav-links" id="nav-links">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#faq">FAQ</a>
+        <a href="chat.html">Chat</a>
+        <a href="login.html">Login</a>
       </nav>
-    </header>
-
-    <main id="home">
-      <section class="hero section">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">Luxury Black • Gold Accent • Real-Time Support</p>
-            <h1><span class="hero-typed" data-text="Premium customer support for a premium marketplace.;Luxury concierge for elite digital services.;Instant replies, premium results.">Premium customer support for a premium marketplace.</span></h1>
-            <p class="hero-description">
-              Welcome to GiwuLogStore. Connect with an expert support team through a messenger-style experience, secure conversations, and instant updates.
-            </p>
-            <div class="hero-actions">
-              <a href="chat.html" class="btn btn-primary magnetic"><span class="btn-inner">Open Support</span></a>
-              <a href="#about" class="btn btn-secondary magnetic"><span class="btn-inner">Learn More</span></a>
-            </div>
-            <div class="hero-stats">
-              <div>
-                <strong data-counter="99">0</strong>
-                <span>Response Focus</span>
-              </div>
-              <div>
-                <strong data-counter="24">0</strong>
-                <span>Hour Support</span>
-              </div>
-              <div>
-                <strong data-counter="1000">0</strong>
-                <span>Conversations</span>
-              </div>
-            </div>
-            <div class="hero-features" aria-hidden="false">
-              <div class="glass-card feature-pill">
-                <strong>Instant</strong>
-                <p>Real-time replies through live messaging.</p>
-              </div>
-              <div class="glass-card feature-pill">
-                <strong>Secure</strong>
-                <p>Guest IDs & encrypted session storage.</p>
-              </div>
-              <div class="glass-card feature-pill">
-                <strong>Premium</strong>
-                <p>Concierge-level support and fast resolution.</p>
-              </div>
-            </div>
-          </div>
-            <div class="hero-visual">
-            <div class="glass-card hero-card" data-parallax="true">
-              <div class="status-pill">● Online • Support Ready</div>
-              <h3>Private and fluent support experience</h3>
-              <p>Your guest ID is created instantly and saved securely in your browser for future support conversations.</p>
-              <div class="hero-pill-row">
-                <span>Guest ID</span>
-                <strong id="guest-id-display">Generating…</strong>
-              </div>
-              <div class="hero-visual-inner">
-                <img src="assets/images/hero-illustration.svg" alt="Hero illustration" class="hero-illustration" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="about" class="section">
-        <div class="container">
-          <div class="section-intro">
-            <p class="eyebrow">Premium Services</p>
-            <h2>Everything clients need in one exclusive marketplace.</h2>
-            <p>From secure VPN access to social media growth and private account solutions, GiwuLogStore brings luxury service and professional support together.</p>
-          </div>
-          <div class="features-grid">
-            <article class="glass-card feature-card">
-              <h3>Guest ID Tracking</h3>
-              <p>Every visitor receives a unique guest identifier and can continue support conversations seamlessly.</p>
-            </article>
-            <article class="glass-card feature-card">
-              <h3>Messenger UI</h3>
-              <p>Enjoy a polished dark interface with gold accents, read receipts, and quick replies.</p>
-            </article>
-            <article class="glass-card feature-card">
-              <h3>Realtime Delivery</h3>
-              <p>Messages appear instantly with Firestore-backed synchronization and live updates.</p>
-            </article>
-            <article class="glass-card feature-card">
-              <h3>Admin Console</h3>
-              <p>Manage customer conversations from a premium command center with live customer cards and replies.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container">
-          <div class="section-intro">
-            <p class="eyebrow">Service Catalog</p>
-            <h2>Luxury digital solutions for modern clients.</h2>
-          </div>
-          <div class="service-catalog-grid">
-            <article class="glass-card service-showcase">
-              <div class="service-icon service-icon-vpn" aria-hidden="true">
-                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 2L3 5v6c0 5 3.8 9.7 9 11 5.2-1.3 9-6 9-11V5l-9-3z" fill="url(#g)" />
-                  <defs>
-                    <linearGradient id="g" x1="0" x2="1">
-                      <stop offset="0" stop-color="#ffd700" />
-                      <stop offset="1" stop-color="#f6c600" />
-                    </linearGradient>
-                  </defs>
-                </svg>
-              </div>
-              <h3>VPN Logs</h3>
-              <ul>
-                <li>Express VPN</li>
-                <li>PIA VPN</li>
-                <li>HMU VPN</li>
-                <li>Residential VPN</li>
-                <li>Premium VPN Logs</li>
-              </ul>
-            </article>
-            <article class="glass-card service-showcase">
-              <div class="service-icon service-icon-instagram" aria-hidden="true">
-                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="3" y="3" width="18" height="18" rx="5" fill="url(#ig)" />
-                  <circle cx="12" cy="12" r="3.2" fill="#050505" />
-                  <circle cx="17.5" cy="6.5" r="0.8" fill="#050505" />
-                  <defs><linearGradient id="ig" x1="0" x2="1"><stop offset="0" stop-color="#ffd700" /><stop offset="1" stop-color="#f6c600" /></linearGradient></defs>
-                </svg>
-              </div>
-              <h3>Social Media Accounts</h3>
-              <ul>
-                <li>Facebook Accounts</li>
-                <li>Instagram Accounts</li>
-                <li>Telegram Accounts</li>
-                <li>Discord Accounts</li>
-                <li>Verified & Aged Accounts</li>
-              </ul>
-            </article>
-            <article class="glass-card service-showcase">
-              <div class="service-icon service-icon-telegram" aria-hidden="true">
-                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="12" cy="12" r="10" fill="url(#tg)" />
-                  <path d="M7.5 12.5l9-4-6 6-1-3-2 1z" fill="#050505" />
-                  <defs><linearGradient id="tg" x1="0" x2="1"><stop offset="0" stop-color="#ffd700" /><stop offset="1" stop-color="#f6c600" /></linearGradient></defs>
-                </svg>
-              </div>
-              <h3>Virtual Numbers</h3>
-              <ul>
-                <li>WhatsApp Numbers</li>
-                <li>Telegram Numbers</li>
-                <li>Signal Numbers</li>
-                <li>Google Voice Numbers</li>
-                <li>SMS Verification Numbers</li>
-              </ul>
-            </article>
-            <article class="glass-card service-showcase">
-              <div class="service-icon service-icon-youtube" aria-hidden="true">
-                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="2" y="6" width="20" height="12" rx="3" fill="url(#yt)" />
-                  <path d="M10 9l6 3-6 3V9z" fill="#050505" />
-                  <defs><linearGradient id="yt" x1="0" x2="1"><stop offset="0" stop-color="#ffd700" /><stop offset="1" stop-color="#f6c600" /></linearGradient></defs>
-                </svg>
-              </div>
-              <h3>Boosting Services</h3>
-              <ul>
-                <li>Instagram Followers</li>
-                <li>Instagram Likes</li>
-                <li>Facebook Followers</li>
-                <li>TikTok Growth</li>
-                <li>YouTube Subscribers & Views</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container premium-cta glass-card">
-          <div>
-            <p class="eyebrow">Private Concierge</p>
-            <h2>Need something tailored? Contact support directly.</h2>
-            <p>Whether you need a custom package, a quick question, or a premium solution, the GiwuLogStore team is ready to assist.</p>
-          </div>
+    </div>
+  </header>
+  <main>
+    <section class="hero section" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p>Fast support for premium digital services</p>
+          <h1>Clean support, clear delivery, better outcomes.</h1>
+          <p class="hero-text">GiwuLogStore connects you with support agents, sellers, and secure service workflows in one modern marketplace.</p>
           <div class="hero-actions">
-            <a href="chat.html" class="btn btn-primary">Start a Chat</a>
+            <a href="chat.html" class="btn btn-primary">Start a chat</a>
+            <a href="login.html" class="btn btn-secondary">Sign in</a>
           </div>
         </div>
-      </section>
-
-      <!-- How It Works -->
-      <section id="how-it-works" class="section">
-        <div class="container">
-          <div class="section-intro">
-            <p class="eyebrow">How It Works</p>
-            <h2>A simple 4-step process.</h2>
-            <p>Follow our streamlined flow to find a service, contact a seller, and receive delivery — fast and secure.</p>
-          </div>
-          <div class="how-steps">
-            <div class="step">
-              <div class="step-icon">1</div>
-              <h4>Browse Services</h4>
-              <p>Explore curated premium listings across categories.</p>
-            </div>
-            <div class="connector" aria-hidden="true"></div>
-            <div class="step">
-              <div class="step-icon">2</div>
-              <h4>Contact Seller</h4>
-              <p>Start a private chat to discuss details and pricing.</p>
-            </div>
-            <div class="connector" aria-hidden="true"></div>
-            <div class="step">
-              <div class="step-icon">3</div>
-              <h4>Discuss Your Request</h4>
-              <p>Agree on scope and provide any assets needed.</p>
-            </div>
-            <div class="connector" aria-hidden="true"></div>
-            <div class="step">
-              <div class="step-icon">4</div>
-              <h4>Receive Your Service</h4>
-              <p>Get delivery and confirm completion inside the chat.</p>
-            </div>
+        <div class="card">
+          <h3>Why choose GiwuLogStore?</h3>
+          <p>Simple ordering, secure conversations, and premium support that helps you move faster without wasted time.</p>
+          <div class="stats-grid">
+            <div class="stat-card"><strong>24/7</strong><span>Live help anytime</span></div>
+            <div class="stat-card"><strong>5k+</strong><span>Completed conversations</span></div>
+            <div class="stat-card"><strong>98%</strong><span>Customer satisfaction</span></div>
           </div>
         </div>
-      </section>
-
-      <!-- Reviews & Testimonials -->
-      <section id="testimonials" class="section">
-        <div class="container">
-          <div class="section-intro">
-            <p class="eyebrow">Customer Reviews</p>
-            <h2>What our customers say</h2>
-            <p>Real feedback from customers who chose GiwuLogStore.</p>
-          </div>
-          <div class="reviews-layout">
-            <div class="reviews-carousel glass-card" aria-live="polite">
-              <div class="carousel-stage" id="reviews-stage">
-                <!-- slides injected by js -->
-              </div>
-              <div class="carousel-controls">
-                <button id="rev-prev" class="icon-btn">‹</button>
-                <button id="rev-next" class="icon-btn">›</button>
-              </div>
-            </div>
-            <aside class="review-form glass-card">
-              <h3>Leave a review</h3>
-              <form id="review-form">
-                <label>
-                  <span>Name</span>
-                  <input name="name" required />
-                </label>
-                <label>
-                  <span>Rating</span>
-                  <select name="rating" required>
-                    <option value="5">5 - Excellent</option>
-                    <option value="4">4 - Very Good</option>
-                    <option value="3">3 - Good</option>
-                    <option value="2">2 - Fair</option>
-                    <option value="1">1 - Poor</option>
-                  </select>
-                </label>
-                <label>
-                  <span>Review</span>
-                  <textarea name="text" rows="4" required></textarea>
-                </label>
-                <div style="display:flex;gap:0.5rem;align-items:center">
-                  <button class="btn btn-primary" type="submit">Submit Review</button>
-                  <button type="reset" class="btn btn-secondary">Clear</button>
-                </div>
-              </form>
-            </aside>
-          </div>
+      </div>
+    </section>
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-intro">
+          <p class="hero-text">Luxury digital solutions for modern clients.</p>
+          <h2>Service catalog</h2>
+          <p class="hero-text">Premium product categories designed for secure support, account access, verification, and fast delivery.</p>
         </div>
-      </section>
-
-      <!-- Why Trust Us -->
-      <section id="why-trust" class="section">
-        <div class="container">
-          <div class="section-intro">
-            <p class="eyebrow">Why Customers Trust Us</p>
-            <h2>Reliability that matters</h2>
-            <p>Secure, fast, and professional support that reaches customers worldwide.</p>
-          </div>
-          <div class="trust-grid">
-            <div class="trust-item"><div class="card-icon">🔒</div><h4>Secure Communication</h4></div>
-            <div class="trust-item"><div class="card-icon">⚡</div><h4>Fast Replies</h4></div>
-            <div class="trust-item"><div class="card-icon">🧑‍💼</div><h4>Professional Support</h4></div>
-            <div class="trust-item"><div class="card-icon">🌍</div><h4>Worldwide Service</h4></div>
-            <div class="trust-item"><div class="card-icon">⭐</div><h4>Customer Satisfaction</h4></div>
-            <div class="trust-item"><div class="card-icon">🤝</div><h4>Reliable Assistance</h4></div>
-          </div>
+        <div class="cards-grid">
+          <article class="card"><h3>VPN Logs</h3><p>Access verified VPN account listings from Express VPN, PIA VPN, HMU VPN, Residential VPN, and premium log collections.</p><ul><li>Express VPN</li><li>PIA VPN</li><li>HMU VPN</li><li>Residential VPN</li><li>Premium VPN Logs</li></ul></article>
+          <article class="card"><h3>Social Media Accounts</h3><p>Order ready-to-use accounts for top platforms with verified and aged profiles for Facebook, Instagram, Telegram, and Discord.</p><ul><li>Facebook Accounts</li><li>Instagram Accounts</li><li>Telegram Accounts</li><li>Discord Accounts</li><li>Verified & Aged Accounts</li></ul></article>
+          <article class="card"><h3>Virtual Numbers</h3><p>Receive SMS-ready numbers across major apps and services for verification, messaging, and multi-country access.</p><ul><li>WhatsApp Numbers</li><li>Telegram Numbers</li><li>Signal Numbers</li><li>Google Voice Numbers</li><li>SMS Verification Numbers</li></ul></article>
+          <article class="card"><h3>Boosting Services</h3><p>Grow your social presence with premium boosting packages for Instagram, Facebook, TikTok, and YouTube.</p><ul><li>Instagram Followers</li><li>Instagram Likes</li><li>Facebook Followers</li><li>TikTok Growth</li><li>YouTube Subscribers & Views</li></ul></article>
         </div>
-      </section>
-
-      <!-- FAQ -->
-      <section id="faqs" class="section">
-        <div class="container">
-          <div class="section-intro">
-            <p class="eyebrow">Frequently Asked Questions</p>
-            <h2>Got questions? We have answers.</h2>
-            <p>Browse common questions about placing orders, contacting sellers, delivery times, and more.</p>
-          </div>
-          <div class="faq-grid">
-            <div class="faq-item">
-              <button class="faq-q">How do I place an order?</button>
-              <div class="faq-a">Find the service, contact the seller via chat, agree terms, and confirm payment as instructed.</div>
-            </div>
-            <div class="faq-item">
-              <button class="faq-q">How do I contact the seller?</button>
-              <div class="faq-a">Open the service page and click 'Contact Seller' or start a chat from the Support widget.</div>
-            </div>
-            <div class="faq-item">
-              <button class="faq-q">How long does delivery take?</button>
-              <div class="faq-a">Delivery times are listed per service; discuss timelines directly with the seller during chat.</div>
-            </div>
-            <div class="faq-item">
-              <button class="faq-q">How does account boosting work?</button>
-              <div class="faq-a">Boosting services increase followers/engagement; details depend on the package you choose.</div>
-            </div>
-            <div class="faq-item">
-              <button class="faq-q">Are virtual numbers available for multiple countries?</button>
-              <div class="faq-a">Yes — we offer numbers across many regions. Check the Virtual Numbers service for specific countries.</div>
-            </div>
-          </div>
+      </div>
+    </section>
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-intro">
+          <p class="hero-text">FAQ</p>
+          <h2>Got questions? Get clear answers.</h2>
+          <p class="hero-text">Everything you need to know about starting orders, chatting with support, and getting delivery updates.</p>
         </div>
-      </section>
-    </main>
-
-    <button class="floating-support-btn" id="launch-support" aria-label="Open support chat">💬</button>
-
-    <div class="support-shell" id="support-shell" aria-hidden="true">
-      <div class="support-window glass-card">
-        <div class="support-header">
-          <div>
-            <h3>GiwuLogStore Support</h3>
-            <p><span class="dot"></span> Online</p>
-          </div>
-          <button id="close-support" class="icon-btn" aria-label="Close support">×</button>
+        <div class="summary-list">
+          <details>
+            <summary>How do I start a chat?</summary>
+            <p>Click the chat page, sign in if needed, and send your first message to a support agent.</p>
+          </details>
+          <details>
+            <summary>Can I request custom services?</summary>
+            <p>Yes. Describe your needs in chat and we will connect you with a seller who can help.</p>
+          </details>
+          <details>
+            <summary>Is my conversation secure?</summary>
+            <p>Your chat session is kept private and tied to your secure guest ID.</p>
+          </details>
+          <details>
+            <summary>What if I need help after delivery?</summary>
+            <p>Return to chat anytime and our team will continue supporting your case.</p>
+          </details>
         </div>
-        <div class="messages" id="support-messages"></div>
-        <div class="typing" id="support-typing" aria-live="polite"></div>
-        <div class="composer">
-          <button class="icon-btn" id="emoji-btn" aria-label="Add emoji">😊</button>
-          <input id="support-input" type="text" placeholder="Write a message..." />
-          <button class="btn btn-primary" id="support-send">Send</button>
-        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand"><strong>GiwuLogStore</strong><p>Modern support for premium marketplace services.</p></div>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#faq">FAQ</a>
+        <a href="chat.html">Chat</a>
       </div>
     </div>
-
-    <footer class="site-footer">
-      <div class="container footer-grid">
-        <div>
-          <a href="#home" class="brand">GiwuLogStore</a>
-          <p>Luxury support for premium digital services.</p>
-        </div>
-        <div>
-          <h3>Quick Links</h3>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="chat.html">Support</a></li>
-            <li><a href="admin.html">Admin</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">© 2026 GiwuLogStore. All rights reserved.</div>
-    </footer>
-
-    <div class="toast" id="toast" aria-live="polite"></div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.32/dist/lenis.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="js/env.js"></script>
-    <script src="js/config.js"></script>
-    <script src="js/firebase.js"></script>
-    <script src="js/auth.js"></script>
-    <script src="js/animations.js"></script>
-    <script src="js/reviews.js"></script>
-    <script src="js/chat.js"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const toggle = document.getElementById('menu-toggle');
-        const nav = document.getElementById('nav-links');
-        if (!toggle || !nav) return;
-
-        toggle.addEventListener('click', (event) => {
-          event.preventDefault();
-          event.stopPropagation();
-          const isOpen = nav.classList.toggle('is-open');
-          toggle.classList.toggle('is-open', isOpen);
-          toggle.setAttribute('aria-expanded', String(isOpen));
-        });
-
-        nav.querySelectorAll('a').forEach((link) => {
-          link.addEventListener('click', () => {
-            nav.classList.remove('is-open');
-            toggle.classList.remove('is-open');
-            toggle.setAttribute('aria-expanded', 'false');
-          });
-        });
-      });
-    </script>
-  </body>
+    <div class="footer-bottom">© 2026 GiwuLogStore. All rights reserved.</div>
+  </footer>
+  <script src="js/menu.js"></script>
+</body>
 </html>

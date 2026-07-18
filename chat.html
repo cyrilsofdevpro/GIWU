@@ -1,52 +1,60 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GiwuLogStore Support</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/chat.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-  </head>
-  <body>
-    <div class="chat-page-shell">
-      <div id="user-profile" class="glass-card user-profile"></div>
-      <div class="glass-card chat-app">
-        <div class="support-header">
-          <div>
-            <h3>GiwuLogStore Support</h3>
-            <p><span class="dot"></span> Online</p>
-          </div>
-          <a href="index.html" class="icon-btn" aria-label="Back home">←</a>
-        </div>
-        <div class="messages" id="chat-messages"></div>
-        <div class="typing" id="chat-typing" aria-live="polite"></div>
-        <div class="composer">
-          <button class="icon-btn" id="chat-emoji-btn" aria-label="Add emoji">😊</button>
-          <input id="chat-input" type="text" placeholder="Write a message..." />
-          <button class="btn btn-primary" id="chat-send">Send</button>
-        </div>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Support Chat — GiwuLogStore</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand">GiwuLogStore</a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="profile.html">Profile</a>
+        <a href="login.html">Login</a>
+      </nav>
     </div>
-
-    <div class="toast" id="toast" aria-live="polite"></div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.32/dist/lenis.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="js/env.js"></script>
-    <script src="js/config.js"></script>
-    <script src="js/firebase.js"></script>
-    <script src="js/auth.js"></script>
-    <script src="js/animations.js"></script>
-    <script src="js/chat.js"></script>
-  </body>
+  </header>
+  <main class="chat-page-shell">
+    <aside class="sidebar">
+      <section class="panel">
+        <h2>Support hub</h2>
+        <p class="hero-text">A clean space for your chat conversations.</p>
+      </section>
+      <section class="panel">
+        <h3>Secure session</h3>
+        <p class="hero-text">Your guest ID keeps this chat private and persistent.</p>
+      </section>
+    </aside>
+    <section class="chat-panel">
+      <div class="chat-header">
+        <div>
+          <h1>Support Chat</h1>
+          <p>Send messages, ask questions, and receive updates in one place.</p>
+        </div>
+        <a href="index.html" class="btn btn-secondary">Back home</a>
+      </div>
+      <div class="messages" id="chat-messages"></div>
+      <div class="chat-composer">
+        <button class="icon-btn" id="chat-emoji-btn" aria-label="Add emoji">😊</button>
+        <input id="chat-input" type="text" placeholder="Write a message..." autocomplete="off" />
+        <button class="btn btn-primary" id="chat-send">Send</button>
+      </div>
+    </section>
+  </main>
+  <div class="toast" id="toast" aria-live="polite"></div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/env.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/firebase.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/chat.js"></script>
+  <script src="js/menu.js"></script>
+</body>
 </html>
