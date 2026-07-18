@@ -238,7 +238,7 @@ strong[data-counter] { font-variant-numeric: tabular-nums; }
   border: none;
   padding: 0.5rem;
   cursor: pointer;
-  z-index: 1001;
+  z-index: 1200;
   width: 44px;
   height: 44px;
   flex-direction: column;
@@ -247,6 +247,8 @@ strong[data-counter] { font-variant-numeric: tabular-nums; }
   gap: 5px;
   transition: all 0.3s ease;
   position: relative;
+  pointer-events: auto;
+  isolation: isolate;
 }
 
 .menu-toggle:hover {
