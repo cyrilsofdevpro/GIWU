@@ -431,7 +431,6 @@ strong[data-counter] { font-variant-numeric: tabular-nums; }
 .cta-card {
   padding: 1.6rem;
 }
-    display:flex; align-items:center; justify-content:center; padding:1rem;
 .services-grid,
 .features-grid {
   display: grid;
@@ -675,9 +674,8 @@ select:focus {
     grid-template-columns: 1fr;
   }
 }
-  .auth-card { padding:1.2rem; }
-  .reviews-carousel { padding:0.8rem; }
-}
+.auth-card { padding:1.2rem; }
+.reviews-carousel { padding:0.8rem; }
 
 .review-card .stars {
   color: var(--accent);
