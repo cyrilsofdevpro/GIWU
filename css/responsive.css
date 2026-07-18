@@ -198,9 +198,10 @@
   }
 
   .nav-links.is-open {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0) scaleY(1);
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) scaleY(1) !important;
   }
 
   .nav-links a {
